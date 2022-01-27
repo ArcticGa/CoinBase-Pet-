@@ -1,0 +1,278 @@
+/* 
+   ! ========================= RESET, CONNECTING FONTS. =========================
+*/
+@import "../_reset";
+
+/* 
+   ! =============================== HEADER STYLE ===============================
+*/
+@import "../_header";
+
+/* 
+   ! ================================ MAIN STYLE ================================
+*/
+main {
+   .home {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/BlogPageImg/blog/big1.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+
+      .home__content {
+         justify-content: center !important;
+         text-align: center;
+         .home__data {
+            max-width: 930px !important;
+            .home__title {
+               margin-bottom: 17px;
+               h1 {
+                  span {
+                     font-weight: var(--header-weight);
+                     font-size: 2rem;
+                     line-height: 45px;
+                     color: #fff;
+                     text-transform: uppercase;
+                  }
+               }
+            }
+
+            .home__subtitle {
+               font-size: 14px;
+               line-height: 17px;
+               color: #ffffff;
+            }
+         }
+      }
+   }
+
+   .content {
+      margin-bottom: 115px;
+      .content__data {
+         margin: 0 auto;
+         max-width: 750px;
+         p {
+            margin-bottom: 60px;
+            line-height: 32px !important;
+            span {
+               display: block;
+               margin-bottom: 40px;
+            }
+         }
+         .content__mini-block {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            img {
+               order: 1;
+            }
+            p {
+               margin-bottom: 20px !important;
+               line-height: 28px;
+               max-width: 342px;
+               &:last-child {
+                  margin: 0 !important;
+               }
+            }
+         }
+      }
+   }
+
+   .info {
+      margin-bottom: 115px;
+      .info__content {
+         max-width: 750px;
+         margin: 0 auto;
+         display: flex;
+         flex-direction: column;
+         .info__up {
+            margin-bottom: 68px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .info__tags {
+               h5 {
+                  font-style: italic;
+                  font-weight: var(--header-weight);
+                  font-size: 1rem;
+                  line-height: 23px;
+                  color: var(--textP-main-color);
+               }
+            }
+            .info__share {
+               display: flex;
+               align-items: center;
+               h5 {
+                  font-size: 1rem;
+                  line-height: 23px;
+                  color: var(--textP-main-color);
+               }
+               .info__icons {
+                  a {
+                     margin-left: 20px;
+                  }
+               }
+            }
+         }
+         .info__down {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .info__how-sell {
+               h5 {
+                  max-width: 270px;
+                  font-weight: var(--header-weight);
+                  font-size: 1.125rem;
+                  line-height: 25px;
+                  color: #2f2f2f;
+               }
+            }
+            .info__stock {
+               max-width: 210px;
+               text-align: right;
+               h5 {
+                  span {
+                     font-weight: var(--header-weight);
+                     color: transparent;
+                     -webkit-background-clip: text;
+                     background-clip: text;
+                     background-image: linear-gradient(178.18deg, #fd749b -13.56%, #281ac8 158.3%);
+
+                     font-size: 1.125rem;
+                     line-height: 25px;
+                  }
+               }
+            }
+         }
+         .info__mini-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            a {
+               font-size: 0.875rem;
+               line-height: 17px;
+               color: #989898;
+            }
+         }
+      }
+   }
+
+   .comment {
+      margin-bottom: 115px;
+      .comment__content {
+         .comment__title {
+            max-width: 751px;
+            margin: 0 auto 60px auto;
+            margin-bottom: 60px;
+            p {
+               font-size: 1rem;
+               line-height: 23px;
+               color: var(--textP-main-color);
+            }
+         }
+
+         form {
+            position: relative;
+            left: 4.2%;
+
+            margin-bottom: 50px !important;
+            max-width: 870px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            .center {
+               display: flex;
+               justify-content: space-between;
+
+               margin-bottom: 30px;
+               input {
+                  width: 411px;
+
+                  padding: 20px;
+                  border: 1px solid #d1d1d1;
+                  border-radius: 5px;
+               }
+            }
+            .down {
+               textarea {
+                  width: 100%;
+                  height: 190px;
+                  resize: none;
+                  padding: 20px;
+                  border: 1px solid #d1d1d1;
+                  border-radius: 5px;
+               }
+            }
+         }
+         a {
+            position: relative;
+            left: 23%;
+         }
+      }
+   }
+}
+@media screen and (max-width: 769px) {
+   .content {
+      margin-bottom: 70px !important;
+      .content__mini-block {
+         flex-direction: column;
+         img {
+            order: 0;
+            width: 270px !important;
+         }
+      }
+   }
+
+   .info {
+      margin-bottom: 50px !important;
+      .info__content {
+         .info__up {
+            flex-direction: column;
+            .info__tags {
+               margin-bottom: 10px;
+            }
+         }
+         .info__down {
+            margin-bottom: 40px !important;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            .info__how-sell {
+               margin-bottom: 10px !important;
+            }
+            .info__stock {
+               text-align: left !important;
+               h5 {
+                  text-align: center;
+               }
+            }
+         }
+      }
+   }
+
+   .comment {
+      margin-bottom: 60px !important;
+      form {
+         left: 0 !important;
+         .center {
+            flex-direction: column;
+            input {
+               width: 100% !important;
+               margin-bottom: 30px;
+               &:last-child {
+                  margin: 0;
+               }
+            }
+         }
+      }
+      a {
+         left: 0 !important;
+      }
+   }
+}
+
+/* 
+   ! =============================== FOOTER STYLE ===============================
+*/
+@import "../_footer";

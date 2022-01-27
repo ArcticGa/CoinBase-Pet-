@@ -1,0 +1,369 @@
+/* 
+   ! ========================= RESET, CONNECTING FONTS. =========================
+*/
+@import "../_reset";
+
+/* 
+   ! =============================== HEADER STYLE ===============================
+*/
+@import "../_header";
+
+/* 
+   ! ================================ MAIN STYLE ================================
+*/
+main {
+   .about {
+      margin-bottom: 107px;
+      .about__content {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+
+         .about__title {
+            max-width: 515px;
+            margin-bottom: 66px;
+            text-align: center;
+            .title-h {
+               h2 {
+                  margin-bottom: 22px;
+                  span {
+                     font-size: var(--headerP-font-size);
+                     line-height: 40px;
+                  }
+               }
+               hr {
+                  margin: 0 auto;
+                  margin-bottom: 20px;
+               }
+            }
+            .title-p {
+               font-size: var(--headerB-font-size);
+            }
+         }
+         .about__data {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            width: 100%;
+
+            color: var(--textP-main-color);
+            background: #fff;
+            background-clip: padding-box !important; /* !importanté */
+            border: solid 1px transparent !important; /* !importanté */
+            border-radius: 30px;
+
+            transition: 0.5s;
+            &:hover {
+               box-shadow: 0px 50px 100px rgba(0, 0, 0, 0.15);
+               &::before {
+                  background: #fff;
+               }
+            }
+
+            &::before {
+               content: "";
+               position: absolute;
+               top: 0;
+               right: 0;
+               bottom: 0;
+               left: 0;
+               z-index: -1;
+               margin: -1px; /* !importanté */
+               border-radius: inherit; /* !importanté */
+               background: var(--section-color-gradient);
+            }
+            .about__img {
+               margin-top: 35px;
+               margin-bottom: 43px;
+            }
+            .about__info {
+               margin-bottom: 56px;
+               .title-h {
+                  margin-bottom: 45px;
+                  hr {
+                     margin: 0 auto;
+                  }
+               }
+               .title-p {
+                  max-width: 542px;
+                  margin-bottom: 35px;
+                  font-size: var(--headerB-font-size);
+               }
+               .about__icons {
+                  img {
+                     margin: 0 19px;
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   .history {
+      margin-bottom: 125px;
+      .container {
+         padding: 0 50px;
+      }
+
+      //Intermediate styles
+      .block {
+         cursor: pointer;
+         max-width: 36%;
+         margin-left: 110px;
+         padding: 20px;
+         transition: 0.3s ease-in-out;
+         border-radius: 20px;
+
+         &:hover {
+            border: 1px soild #fd749b;
+            border-radius: 20px;
+            transform: translateY(-10px);
+            box-shadow: 0px 50px 100px rgba(0, 0, 0, 0.15);
+         }
+      }
+      .right-side {
+         display: flex;
+         justify-content: flex-end;
+         text-align: left;
+         .block {
+            text-align: left;
+            margin-left: 0;
+            margin-right: 110px;
+         }
+      }
+      .up {
+         margin-top: 25px;
+      }
+
+      // MAIN STYLES
+      .history__content {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         .title-h {
+            margin: 0 auto;
+            margin-bottom: 86px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+         }
+         .history__data {
+            width: 100%;
+            position: relative;
+            &::before {
+               content: "";
+               position: absolute;
+               top: 0;
+               left: 49.5%;
+               bottom: -3px;
+               width: 17px;
+
+               background: url("../img/AboutPageImg/Main/History/Tree.png") center no-repeat;
+               background-size: cover;
+            }
+            .history__info {
+               width: 100%;
+               margin-bottom: 45px;
+               text-align: right;
+               .title {
+                  margin-bottom: 20px;
+                  h2 {
+                     background-color: var(--white-main-color);
+                     span {
+                        font-weight: var(--header-weight);
+                        color: transparent;
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        background-image: linear-gradient(178.18deg, #fd749b -13.56%, #281ac8 158.3%);
+
+                        font-size: 1.5rem;
+                        line-height: 30px;
+                     }
+                  }
+               }
+               p {
+                  line-height: 30px;
+                  color: var(--textP-main-color);
+                  font-size: var(--sectionP-font-size);
+               }
+            }
+         }
+      }
+      .history__cont {
+         display: flex;
+         justify-content: center;
+         margin-top: 30px;
+         p {
+            text-transform: uppercase;
+            font-weight: var(--header-weight);
+            color: var(--textP-main-color);
+            line-height: 20px;
+            font-size: var(--footetLi-font-size);
+         }
+      }
+   }
+
+   
+
+   .subscribe {
+      margin-bottom: 91px;
+      .container {
+         .subscribe__content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .subscribe__title {
+               margin-bottom: 75px;
+               .title-h {
+                  text-align: center;
+                  margin-bottom: 35px;
+                  hr {
+                     margin: 0 auto;
+                  }
+               }
+               .title-p {
+                  max-width: 378px;
+                  text-align: center;
+               }
+            }
+
+            form {
+               display: flex;
+               .subscribe__mail {
+                  position: relative;
+                  input[placeholder] {
+                     color: var(--textP-main-color);
+
+                     font-size: 1rem;
+                  }
+                  input {
+                     height: 100%;
+                     font-size: 1rem;
+                     margin-right: 9px;
+                     width: 388px;
+                     display: inline-block;
+
+                     position: relative;
+                     color: var(--textP-main-color);
+                     padding: 12px 29px;
+                     border-radius: 100px;
+                     border: 1px solid #b152dd;
+                  }
+                  .title-btn {
+                     display: block;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+@media screen and (max-width: 769px) {
+   .about {
+      .about__content {
+         .about__data {
+            padding: 10px;
+            .about__img {
+               margin-bottom: 10px !important;
+               img {
+                  width: 250px;
+               }
+            }
+            .about__info {
+               .title-h {
+                  margin-bottom: 30px !important;
+               }
+               .title-p {
+                  margin-bottom: 20px !important;
+               }
+               .about__icons {
+                  img {
+                     width: 30px;
+                     margin: 15px !important;
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   .history {
+      .container {
+         padding: 0 !important;
+      }
+      .block {
+         width: 100% !important;
+         margin: 0 !important;
+      }
+      .right-side {
+         justify-content: center;
+         text-align: center;
+      }
+      .up {
+         margin: 0 !important;
+      }
+
+      .history__content {
+         padding: 25px 10px;
+         border-radius: 30px;
+         box-shadow: 0px 50px 100px rgba(0, 0, 0, 0.15);
+         .title-h {
+            margin-bottom: 30px !important;
+         }
+         .history__data {
+            &::before {
+               display: none;
+            }
+            .history__info {
+               margin-bottom: 30px !important;
+               text-align: left !important;
+               &:last-child {
+                  margin: 0 !important;
+               }
+               .block {
+                  max-width: 100% !important;
+               }
+            }
+         }
+      }
+   }
+
+   .subscribe {
+      margin-bottom: 60px !important;
+      form {
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         input {
+            width: 100% !important;
+            margin-bottom: 15px;
+            margin-left: 0;
+         }
+      }
+   }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+   .history {
+      .container {
+         margin: 0;
+      }
+      .block {
+         margin-left: 0 !important;
+         max-width: 45% !important;
+      }
+      .right-side {
+         .block {
+            margin: 0 !important;
+         }
+      }
+   }
+}
+/* 
+   ! =============================== FOOTER STYLE ===============================
+*/
+@import "../_footer";

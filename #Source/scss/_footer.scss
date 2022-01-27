@@ -1,0 +1,153 @@
+footer {
+   color: var(--text-footer-color);
+   background: var(--bg-footer-color);
+   padding: 75px 55px 70px 45px;
+   .click {
+      cursor: pointer;
+   }
+   .f-container {
+      .footer__content {
+         display: flex;
+         justify-content: space-between;
+
+         .footer__title {
+            line-height: 30px;
+            font-size: var(--headerP-font-size);
+            color: var(--white-main-color);
+            margin-bottom: 42px;
+         }
+         .footer__item {
+            margin-bottom: 21px;
+            a {
+               color: var(--text-footer-color);
+            }
+            &:last-child {
+               margin: 0;
+            }
+         }
+
+         .footer__info {
+            align-self: center;
+            max-width: 370px;
+            .footer__logo {
+               margin-bottom: 35px;
+            }
+            .footer__text {
+               margin-bottom: 18px;
+               p {
+                  font-size: var(--headerB-font-size);
+                  line-height: 24px;
+               }
+            }
+            .footer__icons {
+               width: 110px;
+               display: flex;
+               justify-content: space-between;
+
+               a {
+                  display: inline-block;
+               }
+            }
+         }
+         .footer__contacts {
+            display: flex;
+            flex-direction: column;
+            .footer__list {
+               flex: 1 1 auto;
+            }
+         }
+         .footer__insta {
+            .footer__photoes {
+               display: grid;
+               grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+               column-gap: 10px;
+               row-gap: 10px;
+               .footer__photo {
+                  cursor: pointer;
+                  width: 70px;
+                  height: 70px;
+                  background: #c4c4c4;
+                  a {
+                     width: 100%;
+                     height: 100%;
+                     img {
+                        width: 100%;
+                        height: 100%;
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 769px) {
+   footer {
+      padding: 40px 55px 60px 55px;
+      text-align: center;
+      .f-container {
+         .footer__content {
+            flex-direction: column;
+            .footer__info {
+               .footer__icons {
+                  margin: 0 auto;
+                  width: 200px;
+                  .footer__icon {
+                     
+                     img {
+                        width: 20px;
+                        height: 20px;
+                        vertical-align: middle;
+                     }
+                  }
+               }
+            }
+            .footer__info,
+            .footer__links,
+            .footer__contacts,
+            .footer__insta {
+               margin-bottom: 40px;
+            }
+            .footer__insta {
+               margin: 0;
+               .fc {
+                  display: flex;
+                  justify-content: center;
+               }
+               .footer__photoes {
+                  grid-template: repeat(2, 45px) / repeat(4, 45px);
+                  .footer__photo {
+                     width: 45px;
+                     height: 45px;
+                     row-gap: 0 !important;
+                     column-gap: 0 !important;
+                     a {
+                        width: 100%;
+                        height: 100%;
+                        img {
+                           width: 100%;
+                           height: 100%;
+                        }
+                     }
+                  }
+               }
+            }
+         }
+
+         .footer__title {
+            margin-bottom: 10px !important;
+         }
+         .footer__item {
+            margin-bottom: 10px !important;
+         }
+      }
+   }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+   footer {
+      .footer__content {
+         flex-wrap: wrap;
+      }
+   }
+}
